@@ -5,9 +5,9 @@
 - Four quality pull requests must be submitted to public GitHub repositories.
 - You can sign up anytime between October 1 and October 31.
 - To qualify for the official limited edition Hacktoberfest shirt, you must register and make four pull requests (PRs) between October 1-31 (in any time zone). PRs can be made to any public repo on GitHub, not only the ones with issues labeled Hacktoberfest.
-- If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate. This year, the first 50,000 participants who successfully complete the challenge will earn a T-shirt.
+- If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate.
 
-This is the repository for Hacktoberfest 2019 Meetup at NITK Surathkal organized by [Web Enthusiasts' Club NITK](https://github.com/WebClub-NITK) and [IEEE NITK](https://github.com/IEEE-NITK).
+This is the repository for Hacktoberfest 2020 Meetup at NITK Surathkal organized by [Web Enthusiasts' Club NITK](https://github.com/WebClub-NITK) and [IEEE NITK](https://github.com/IEEE-NITK).
 
 ### Contributing Guidelines
 - To get started, take a look at our [Contributing Guidelines](.github/CONTRIBUTING.md) for more information.
