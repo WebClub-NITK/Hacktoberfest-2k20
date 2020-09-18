@@ -1,3 +1,7 @@
+---
+labels: "Hacktoberfest"
+---
+
 ### Description
 Please explain the issue here. Provide the requirements / specifications in detail and try to avoid ambiguity.
 

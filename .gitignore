@@ -1,0 +1,11 @@
+*.DS_Store
+*#
+*~
+*.o
+.idea/
+venv/
+.gradle/
+*.iml
+build/
+/bin/
+.vscode/

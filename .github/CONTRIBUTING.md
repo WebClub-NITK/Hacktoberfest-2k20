@@ -13,7 +13,7 @@ All members of our community are expected to follow our [Code of Conduct](CODE_O
 - Clone the forked repository to your system.
 - Make the relevant changes according to the issue description and make sure you follow the directory structure mentioned there.
 - Commit and push the changes to your forked repository.
-- Make a Pull Request to the [Hacktoberfest-2k19](https://github.com/WebClub-NITK/Hacktoberfest-2k20) repository. Please stick to the [Pull Request template](PULL_REQUEST_TEMPLATE.md) provided.
+- Make a Pull Request to the [Hacktoberfest-2k20](https://github.com/WebClub-NITK/Hacktoberfest-2k20) repository. Please stick to the [Pull Request template](PULL_REQUEST_TEMPLATE.md) provided.
 - Follow up on any changes requested and wait for it to be approved.
 - You're done. Thanks for the contribution. Keep contributing :)
 
