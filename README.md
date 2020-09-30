@@ -1,5 +1,5 @@
 # Hacktoberfest 2020
-[Hacktoberfest](https://hacktoberfest.digitalocean.com/) is a month-long celebration of open source software run by DigitalOcean in partnership with Dev
+[Hacktoberfest](https://hacktoberfest.digitalocean.com/) is a month-long celebration of open source software run by DigitalOcean in partnership with Dev and Intel.
 
 - Hacktoberfest is open to everyone in our global community!
 - Four quality pull requests must be submitted to public GitHub repositories.
