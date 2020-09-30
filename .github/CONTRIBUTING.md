@@ -18,6 +18,4 @@ All members of our community are expected to follow our [Code of Conduct](CODE_O
 - You're done. Thanks for the contribution. Keep contributing :)
 
 ### Making new issues
-If you would like to work on an issue which is not currently present, you can do so by:
-- You can go ahead and create an issue on the repository by following the [Issue template](ISSUE_TEMPLATE.md) provided.
-- The issue will then be assigned to you. You can start working on it.
+If you would like to create an issue which is not currently present, you can go ahead and do it by clicking on "New issue" on the [issues page](https://github.com/WebClub-NITK/Hacktoberfest-2k20/issues), following the format provided.
