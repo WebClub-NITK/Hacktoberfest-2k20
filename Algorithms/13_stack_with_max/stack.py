@@ -20,7 +20,7 @@ class Stack:
         if self.items[self.top-1] < item or self.top==0:
             self.itemmax.append(item)
         else:
-            self.itemmax.append(self.items[self.top-1])
+            self.itemmax.append(self.itemmax[self.top-1])
         self.top=self.top+1
     def pop(self):
         self.top=self.top-1
@@ -37,23 +37,25 @@ class Stack:
 
 if __name__ == "__main__":
     stack=Stack()
-    stack.push(10)
+    stack.push(5)
     print("Pushed Element :",stack.peek())
     print("Max Element :", stack.get_max())
     
+    stack.push(4)
+    print("Pushed Element :",stack.peek())
+    print("Max Element :", stack.get_max())
+    
+    stack.push(1)
+    print("Pushed Element :",stack.peek())
+    print("Max Element :", stack.get_max())
+    stack.push(6)
+    print("Pushed Element :",stack.peek())
+    print("Max Element :", stack.get_max())
     stack.push(2)
     print("Pushed Element :",stack.peek())
     print("Max Element :", stack.get_max())
-    
-    stack.push(50)
-    print("Pushed Element :",stack.peek())
-    print("Max Element :", stack.get_max())
-    stack.push(45)
-    print("Pushed Element :",stack.peek())
-    print("Max Element :", stack.get_max())
-    stack.push(30)
-    print("Pushed Element :",stack.peek())
-    print("Max Element :", stack.get_max())
+    #print(stack.itemmax)
+    #print(stack.items)
     print("==========================")
     while stack.size()!=0:
         print("Max Element :", stack.get_max())
