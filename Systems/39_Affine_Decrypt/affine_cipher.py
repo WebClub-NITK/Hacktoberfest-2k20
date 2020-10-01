@@ -1,6 +1,3 @@
-# Program to Encrypt and Decrypt Affine Cipher
-# Programmed by : Aravindha Hariharan M
-
 message = input("Enter the Text to be Encrpyted: ")
 a,b = [int(i) for i in input("Enter the Key value: ").split(",")]
 def egcd(a,b):
