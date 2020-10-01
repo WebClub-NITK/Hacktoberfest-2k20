@@ -1,10 +1,10 @@
-// Title: Decrypt affine cypher
-// Algorithm:
-	// D ( x ) = a^-1 ( x - b ) mod m
-	// a^-1 : modular multiplicative inverse of a modulo m. i.e., it satisfies the equation
-	// 1 = a a^-1 mod m .
 #include<bits/stdc++.h> 
 using namespace std; 
+// Title: Decrypt affine cypher
+// Algorithm:
+// D ( x ) = a^-1 ( x - b ) mod m
+// a^-1 : modular multiplicative inverse of a modulo m. i.e., it satisfies the equation
+// 1 = a a^-1 mod m .
 
 string decrypt_cipher(string cipher,int a,int b){
 	// priginal messgae
@@ -35,7 +35,7 @@ string decrypt_cipher(string cipher,int a,int b){
 }
 
 // testing 
-int main{ 
+int main(){ 
 	string decrypted;
 	cout<<"Enter decrypted output to encrypt: "<<endl;
 	cin>>decrypted;
