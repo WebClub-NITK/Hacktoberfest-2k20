@@ -1,3 +1,5 @@
+**NOTE**: Pull Requests will be approved and merged from 4th October onwards.
+
 # Hacktoberfest 2020
 [Hacktoberfest](https://hacktoberfest.digitalocean.com/) is a month-long celebration of open source software run by DigitalOcean in partnership with Dev and Intel.
 
