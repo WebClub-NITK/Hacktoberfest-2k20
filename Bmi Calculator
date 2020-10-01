@@ -1,0 +1,47 @@
+from tkinter import *
+import tkinter.messagebox as tmsg
+
+root=Tk()
+root.geometry("550x200")
+root.title("BMI Calculator")
+
+def cal():
+    try:
+        a=float(FeetEntry.get())
+        b=float(inchesEntry.get())
+        c=float(WeightEntry.get())
+        b=a*12+b
+        bmi=(c /b**2) * 703
+        if bmi <=18.:
+            tmsg.showinfo("BMI",f"Underweight {bmi}")
+        elif bmi>18 and bmi<=24.9:
+             tmsg.showinfo("BMI", f"Normal weight {bmi}")
+        elif bmi>25 and bmi<=29.9:
+            tmsg.showinfo("BMI",f"Overweight {bmi}")
+        else:
+            tmsg.showinfo("BMI",f"Obese {bmi}")
+    except ValueError:
+        tmsg.showinfo("Invalid Details","Please Enter Valid Details")
+
+feet,inches=IntVar(),IntVar()
+weight=IntVar()
+
+Label(root,text="Height",font='lucida 13 bold').grid(column=0,row=1,padx=10,pady=10)
+
+FeetEntry=Entry(root,text="feet",textvar=feet)
+FeetEntry.grid(padx=10,column=2,row=1,pady=10)
+Label(root,text="In Feet").grid(column=1,row=1)
+inchesEntry=Entry(root,text=" Inches",textvar=inches)
+inchesEntry.grid(padx=10,pady=10,column=4,row=1)
+Label(root,text="In Inches").grid(column=3,row=1)
+
+Label(root,text="Weight",font='lucida 13 bold').grid(padx=10,pady=10,column=0,row=2)
+WeightEntry=Entry(root,text="feet",textvar=weight)
+WeightEntry.grid(padx=10,pady=10,column=2,row=2)
+Label(root,text="In Pounds").grid(column=1,row=2)
+
+
+Button(root,text="Calculate Now!",font='lucida 10 bold',padx=5,pady=5,command=cal).grid(column=4,row=4)
+
+root.mainloop()
+
