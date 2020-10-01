@@ -26,7 +26,5 @@ List of resources that might be required / helpful.
 Make sure a directory is created under the corresponding domain folder properly following the collaborator guidelines and mention it here.
 
 #### Note
-Please claim the issue first by commenting here before starting to work on it.
-
-#### For co-ordinators/maintainers creating the issues
-Please mention yourself as the point of contact so that the person submitting the PR can request review from you.
+1. Please claim the issue first by commenting here before starting to work on it.
+2. Once you are done with the task and have created a Pull Request, please tag @<!-- your username --> to request a review.
