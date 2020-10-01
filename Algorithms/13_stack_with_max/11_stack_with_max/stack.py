@@ -2,7 +2,7 @@
 """
 Push O(1) :Push Element To Top
 Pop O(1) : POP Element From Top
-MAX O(n) : Returns max Element from the stack
+get_max O(n) : Returns max Element from the stack
 Peek O(n): Returns Top Element
 Size O(1) : Returns Size of the stack
 """
@@ -24,7 +24,7 @@ class Stack:
 
     def size(self):
         return len(self.items)
-    def max(self):
+    def get_max(self):
         return max(self.items)
 
 if __name__ == "__main__":
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     stack.push(59)
     stack.push(30)
     
-    print("Max Element :", stack.max())
+    print("Max Element :", stack.get_max())
 
     while stack.size()!=0:
         print(stack.pop())
