@@ -37,21 +37,21 @@ class Stack:
 
 if __name__ == "__main__":
     stack=Stack()
-    stack.push(5)
+    stack.push(10)
     print("Pushed Element :",stack.peek())
     print("Max Element :", stack.get_max())
     
-    stack.push(4)
-    print("Pushed Element :",stack.peek())
-    print("Max Element :", stack.get_max())
-    
-    stack.push(1)
-    print("Pushed Element :",stack.peek())
-    print("Max Element :", stack.get_max())
-    stack.push(6)
-    print("Pushed Element :",stack.peek())
-    print("Max Element :", stack.get_max())
     stack.push(2)
+    print("Pushed Element :",stack.peek())
+    print("Max Element :", stack.get_max())
+    
+    stack.push(50)
+    print("Pushed Element :",stack.peek())
+    print("Max Element :", stack.get_max())
+    stack.push(45)
+    print("Pushed Element :",stack.peek())
+    print("Max Element :", stack.get_max())
+    stack.push(30)
     print("Pushed Element :",stack.peek())
     print("Max Element :", stack.get_max())
     #print(stack.itemmax)
