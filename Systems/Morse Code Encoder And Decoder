@@ -1,0 +1,127 @@
+def morse_Encoder(x):
+    if x == 'a':
+        return ".-"
+    elif x == 'b':
+        return "-..."
+    elif x == 'c':
+        return "-.-."
+    elif x == 'd':
+        return "-.."
+    elif x == 'e':
+        return "."
+    elif x == 'f':
+        return "..-."
+    elif x == 'g':
+        return "--."
+    elif x == 'h':
+        return "...."
+    elif x == 'i':
+        return ".."
+    elif x == 'j':
+        return ".---"
+    elif x == 'k':
+        return "-.-"
+    elif x == 'l':
+        return ".-.."
+    elif x == 'm':
+        return "--"
+    elif x == 'n':
+        return "-."
+    elif x == 'o':
+        return "---"
+    elif x == 'p':
+        return ".--."
+    elif x == 'q':
+        return "--.-"
+    elif x == 'r':
+        return ".-."
+    elif x == 's':
+        return "..."
+    elif x == 't':
+        return "-"
+    elif x == 'u':
+        return "..-"
+    elif x == 'v':
+        return "...-"
+    elif x == 'w':
+        return ".--"
+    elif x == 'x':
+        return "-..-"
+    elif x == 'y':
+        return "-.--"
+    elif x == 'z':
+        return "--.."
+
+
+def morseDecoder(x):
+    # refer to the Morse table
+    # image attached in the article
+    if x == ".-":
+        return "a"
+    elif x == "-...":
+        return "b"
+    elif x == "-...":
+        return "c"
+    elif x == "-...":
+        return "d"
+    elif x == '.':
+        return "e"
+    elif x == "..-.":
+        return "f"
+    elif x == "--.":
+        return "g"
+    elif x == "....":
+        return "h"
+    elif x == "..":
+        return "i"
+    elif x == ".---":
+        return "j"
+    elif x == "-.-":
+        return "k"
+    elif x == ".-..":
+        return "l"
+    elif x == "--":
+        return "m"
+    elif x == "-.":
+        return "n"
+    elif x == "---":
+        return "o"
+    elif x == ".--.":
+        return "o"
+    elif x == "--.-":
+        return "q"
+    elif x == ".-.":
+        return "r"
+    elif x == "...":
+        return "s"
+    elif x == "-":
+        return "t"
+    elif x == "..-":
+        return "u"
+    elif x == "...-":
+        return "v"
+    elif x == ".--":
+        return "w"
+    elif x == "-..-":
+        return "x"
+    elif x == "-.--":
+        return "y"
+    elif x == "--..":
+        return "z"
+    elif x == "-....-" or x == '':
+        return " "
+
+def morse_Code(s,choice):
+    if choice == 1:
+        for character in s:
+            print(morse_Encoder(character), end="")
+    elif choice == 2:
+        list1 = s.split(" ")
+        for i in list1:
+            print(morseDecoder(i),end="")
+
+print("Press 1 to encode MORSE CODE\nPress 2 To Decode MORSE CODE")
+choice = int(input())
+if __name__ == "__main__":
+    s= input("Please Enter you expression\n")
+    morse_Code(s,choice)
