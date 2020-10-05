@@ -1,0 +1,168 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        font-family: Quicksand;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    body {
+        margin: 0;
+        height: 100vh;
+        padding: 0;
+        border: 0;
+        background: #EC8B5E;
+    }
+    
+    .form {
+        background-color: #fff;
+        height: 140px;
+        width: 450px;
+        border-radius: 10px;
+        margin: 20px auto 20px auto;
+        display: block;
+    }
+    
+    .row-one {
+        padding: 20px;
+    }
+    
+    .text-input {
+        width: 60px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #dbeffe;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    
+    #submit {
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        width: 140px;
+        margin: 50px;
+        background-color: #141A46;
+        color: #fff;
+        margin: auto;
+        display: block;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    #submit:hover {
+        background-color: #141A46;
+    }
+    
+    .text {
+        display: inline-block;
+        margin: 5px 20px 5px 8px;
+        ;
+    }
+    
+    .row-one {
+        padding: 30px 20px 15px 20px;
+    }
+    
+    .container {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .container input {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    h1 {
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        color: #141A46;
+        padding-top: 15px;
+        display: block;
+    }
+    
+    h2 {
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    h3 b {
+        font-size: 32px;
+        font-weight: 300;
+        color: #141A46;
+    }
+</style>
+
+<body>
+    <h3><b>BMI</b> Calculator</h3>
+    <form class="form" id="form" onsubmit="validateForm()">
+
+        <div class="row-one">
+            <input type="number" class="text-input" id="height" autocomplete="off" required>
+            <p class="text">Height (cm)</p>
+            <input type="number" class="text-input" id="weight" autocomplete="off" required>
+            <p class="text">Weight (kg)</p>
+        </div>
+        <button type="button" id="submit">Submit</button>
+    </form>
+    <div class="row-one">
+        <h1 id="result"> </h1>
+        <h3 id="bmi"> </h3>
+    </div>
+    <script>
+        var height = document.getElementById("height");
+        var weight = document.getElementById("weight");
+        var form = document.getElementById("form");
+
+        function validateForm() {
+            if (height.value == '' || weight.value == '') {
+                alert("All fields are required!");
+                document.getElementById("submit").removeEventListener("click", countBmi);
+            } else {
+                countBmi();
+            }
+        }
+        document.getElementById("submit").addEventListener("click", validateForm);
+
+        function countBmi() {
+            var info = [height.value, weight.value];
+
+            var bmi = Number(info[1]) / (Number(info[0]) / 100 * Number(info[0]) / 100);
+
+            var result = '';
+            if (bmi < 18.5) {
+                result = 'Underweight';
+            } else if (18.5 <= bmi && bmi <= 24.9) {
+                result = 'Healthy';
+            } else if (25 <= bmi && bmi <= 29.9) {
+                result = 'Overweight';
+            } else if (30 <= bmi && bmi <= 34.9) {
+                result = 'Obese';
+            } else if (35 <= bmi) {
+                result = 'Extremely obese';
+            }
+            document.getElementById("result").innerHTML = result;
+            document.getElementById("bmi").innerHTML = "Your BMI is: " + bmi.toFixed(2);
+        }
+    </script>
+
+</body>
