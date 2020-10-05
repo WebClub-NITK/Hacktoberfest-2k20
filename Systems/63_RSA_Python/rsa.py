@@ -1,5 +1,7 @@
 """Simple implementation of RSA algorithm."""
 
+import random
+
 
 def egcd(a: int, b: int) -> int:
     """Euclidian algorithm to compute GCD."""
@@ -50,7 +52,7 @@ p, q = 61, 53  # p and q are primes.
 e = 17  # e is prime with (p - 1)(q - 1).
 rsa = RSA(p, q, e)
 
-message = 65  # Message is less than p * q.
+message = random.randint(0, p * q)  # Message is less than p * q.
 print(f'Message: {message}')
 
 encrypted = rsa.encrypt(message)
