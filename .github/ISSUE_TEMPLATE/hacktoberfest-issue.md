@@ -2,7 +2,7 @@
 name: Hacktoberfest Issue
 about: Issue for a Hacktoberfest task
 title: ''
-labels: ''
+labels: Hacktoberfest
 assignees: ''
 
 ---
