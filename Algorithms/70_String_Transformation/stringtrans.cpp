@@ -12,14 +12,6 @@ int minimumOps(string& A, string& B)
        return -1; 
     int count[256]; 
     memset(count, 0, sizeof(count));
-	
-    for (int i=0; i<n; i++)   
-       count[A[i]]++; 
-    for (int i=0; i<n; i++)   
-       count[B[i]]--;         
-    
-  
-    
     int res = 0; 
     for (int i=n-1, j=n-1; i>=0; ) 
     { 
