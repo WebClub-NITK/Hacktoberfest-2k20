@@ -4,6 +4,12 @@ import numpy as np
 class Function:
 	def __init__(self, before=None):
 		self.before = before
+		if before is None:
+			self.before_forward = lambda x: x
+			self.before_diff = lambda _: 1
+		else:
+			self.before_forward = before.forward
+			self.before_diff = before.diff
 
 	def _forward(self, x):
 		pass
@@ -18,19 +24,13 @@ class Function:
 		pass
 
 	def forward(self, x):
-		if self.before is None:
-			return self._forward(x)
-		else:
-			return self._forward(self.before.forward(x))
+		return self._forward(self.before_forward(x))
 
 	def diff(self, x):
-		if self.before is None:
-			return self._diff(x)
-		else:
-			return self._diff(self.before.forward(x)) * self.before.diff(x)
+		return self._diff(self.before_forward(x)) * self.before_diff(x)
 
 	def backward(self, x, diff):
-		diff = diff * self._diff(x)
+		diff = diff * self._diff(self.before_forward(x))
 		self._backward(diff)
 		if self.before is not None:
 			self.before.backward(x, diff)
@@ -80,9 +80,9 @@ class Neuron(Function):
 
 if __name__ == '__main__':
 	data_size = 2
-	train_input = [[1, 2, 3], [2, 3, 4]]
-	train_output = [0.1, 0.9]
-	learning_rate = 0.1
+	train_input = np.array([[1, 2, 3], [2, 3, 4]])
+	train_output = np.array([0.1, 0.9])
+	learning_rate = 0.6
 	total_step = 100000
 
 	network = Sigmoid(Neuron(3))
