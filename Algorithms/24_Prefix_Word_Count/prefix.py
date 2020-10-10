@@ -34,6 +34,7 @@ def rabin_karp(arr, pattern):
 
 
 strings = list(map(str, input().split()))
-prefix = list(str(input()))
-result = rabin_karp(strings, prefix)
-print(*result)
+prefixes = list(map(str, input().split()))
+for prefix in prefixes:
+    result = rabin_karp(strings, list(str(prefix)))
+    print(prefix,": ",len(result),"(",*result,")")
