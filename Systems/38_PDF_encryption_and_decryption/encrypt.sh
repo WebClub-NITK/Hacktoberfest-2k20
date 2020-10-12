@@ -21,7 +21,7 @@ output_file="${filename}_enc.${extension}"
 
 qpdf --encrypt $user_password $owner_password 40 -- $input_file $output_file
 
-if [$? -eq 0]; then
+if [ $? -eq 0 ]; then
 	echo "Successfully encrypted. Created ${output_file}"
 else
 	echo "Error while encrypting"
