@@ -20,7 +20,7 @@ output_file="${filename}_dec.${extension}"
 
 qpdf --decrypt --password=$user_password $input_file $output_file
 
-if [$? -eq 0]; then
+if [ $? -eq 0 ]; then
 	echo "Successfully decrypted. Created ${output_file}"
 else
 	echo "Error while decrypting"
