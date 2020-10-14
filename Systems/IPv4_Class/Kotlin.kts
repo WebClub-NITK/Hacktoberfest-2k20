@@ -1,4 +1,4 @@
-print("Write anything here: ")
+print("Enter the IPV4 address: ")
 
 val address = readLine().toString()
 fun ipv_class(inp : String) {
@@ -16,9 +16,12 @@ fun ipv_class(inp : String) {
         "C"
     else if (cls in 224.. 239)
         "D"
-    else
+    else if (cls in 240.. 255)
         "E"
-    println("Class is $result")
+    else
+        "Invalid IP address"
+
+    println(result)
 }
 
 
