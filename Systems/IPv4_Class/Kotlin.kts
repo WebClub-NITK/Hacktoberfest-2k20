@@ -1,4 +1,4 @@
-print("Enter the IPV4 address: ")
+print("Enter the IPv4 address: ")
 
 val address = readLine().toString()
 fun ipv_class(inp : String) {
