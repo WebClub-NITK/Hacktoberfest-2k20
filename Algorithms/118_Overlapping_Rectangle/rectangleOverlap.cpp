@@ -43,8 +43,8 @@ int main()
 	 
 
 	if (checkOverlap(l1, r1, l2, r2)) 
-		printf("Rectangles Overlap"); 
+		printf("Rectangles are Overlapping"); 
 	else
-		printf("Rectangles Don't Overlap"); 
+		printf("Rectangles are not Overlapping"); 
 	return 0; 
 }
