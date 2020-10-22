@@ -1,0 +1,32 @@
+/*Creating table*/
+DROP TABLE IF EXISTS smartphone_details;
+CREATE TABLE "smartphone_details" (
+	"smartphone_id"	INTEGER NOT NULL UNIQUE,
+	"model_name"	VARCHAR(50),
+	"company_name"	VARCHAR(30),
+	"price"	REAL NOT NULL UNIQUE,
+	"os"	TEXT,
+	"release_date"	TEXT,
+	PRIMARY KEY("smartphone_id" AUTOINCREMENT)
+);
+
+/*Inserting data into the Table*/
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('Pixel 3', 'Google', '57000.00', 'Android', '2018-10-09');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('iPhone XR', 'Apple', '49999.00', 'iOS', '2018-09-12');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('iPhone 11 Pro', 'Apple', '99900.00', 'iOS', '2019-09-10');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('Galaxy Note 10 Plus', 'Samsung', '85000.00', 'Android', '2019-08-07');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('iPhone XS Max', 'Apple', '94999.00', 'iOS', '2018-09-12');
+INSERT or IGNORE INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('Galaxy A50s ', 'Samsung', '19949.00', 'Android', '2019-08-22');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('Galaxy S9', 'Samsung', '44990.00', 'Android', '2018-03-16');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('ROG Phone II', 'Asus', '37999.00', 'Android', '2019-09-23');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('Mi A3', 'Xiaomi', '12999.00', 'Android', '2019-08-21');
+INSERT INTO smartphone_details(model_name,company_name,price,os,release_date) VALUES('Galaxy A10', 'Samsung', '7990.00', 'Android', '2019-03-02');
+
+/*extracting smartphone details from table with price less than 60000*/
+SELECT * FROM smartphone_details WHERE price<60000 ORDER BY price ASC;
+
+/*extracting smartphone details from table with release date between 2018-03-01 and 2018-12-31*/
+SELECT * FROM smartphone_details WHERE date(release_date) BETWEEN '2018-03-01' AND '2018-12-31';
+
+/*extracting smartphone details of samsung company with cheapest price*/
+SELECT * FROM smartphone_details WHERE company_name = 'Samsung' ORDER BY price LIMIT 2;

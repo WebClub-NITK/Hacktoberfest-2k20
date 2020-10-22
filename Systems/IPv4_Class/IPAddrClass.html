@@ -1,0 +1,35 @@
+<html>
+	<script>
+		var IP_Addr = prompt("Enter the IP address:");
+		var parts = IP_Addr.split(".");
+		
+		// Convert parts of IP address into integers
+		for (var count = 0; count < parts.length; count++) {
+			parts[count] = Number(parts[count]);
+		}
+		//console.log(parts);
+		
+		// Check IP is valid
+		var valid_IP = true;
+		for (var count = 0; count < parts.length; count ++) {
+			if (parts[count] < 0 || parts[count] > 255){
+				alert("Please enter a valid IP address");
+				valid_IP = false;
+			}
+		}
+		
+		if (valid_IP == true) {
+			if (parts[0] <= 127 & parts[0] >= 1) {
+				alert("This is a class A IPv4 address.");
+			} else if (parts[0] <= 191 & parts[0] >= 128) {
+				alert("This is a class B IPv4 address.");
+			} else if (parts[0] <= 223 & parts[0] >= 192) {
+				alert("This is a class C IPv4 address.");
+			} else if (parts[0] <= 239 & parts[0] >= 224) {
+				alert("This is a class D IPv4 address.");
+			} else if (parts[0] <= 255 & parts[0] >= 240) {
+				alert("This is a class E IPv4 address.");
+			};
+		};
+	</script>
+</html>
