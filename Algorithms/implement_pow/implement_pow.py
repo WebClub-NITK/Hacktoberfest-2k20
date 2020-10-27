@@ -11,4 +11,4 @@ def power(x, y):
             return (temp * temp) / x
 
 x, y = 2, 10
-print('%.3f' % (power(x, y)))
+print('%.1f' % (power(x, y)))
